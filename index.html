@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Rui Costa é fotógrafo de casamentos e paisagens no Porto, Portugal. Fotografia documental, sessões de família ao ar livre e impressão artística em papéis de algodão." />
+    <title>Rui Costa — Fotografia</title>
+
+    <!-- importa fontes do google -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Newsreader:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- importa icones de google -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <!-- adiciona tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- define cor e fonte -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              fundo: "#faf9f6",
+              bege: "#f4f3f1",
+              texto: "#1a1c1a",
+              cinza: "#4a4640",
+              terracota: "#825338",
+            },
+            fontFamily: {
+              serif: ["Newsreader", "serif"],
+              sans: ["Manrope", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- css extra -->
+    <style>
+      /* esconde a barra de rolagem nos browsers mais recentes */
+      html {
+        scrollbar-width: none;
+      }
+
+      /* esconde a barra de rolagem nos browsers mais mais antigos */
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body class="bg-fundo text-texto font-sans">
+    
+    <!-- cabeçalho -->
+    <header
+      class="fixed top-0 z-50 left-0 w-full flex items-center justify-between h-20 px-6 md:px-16 shadow-sm backdrop-blur-xl bg-fundo/90"
+    >
+      <!-- logótipo de lado esquerdo -->
+      <a href="#">
+        <p class="font-serif text-2xl">Rui Costa</p>
+        <p class="text-[11px] uppercase tracking-widest text-cinza">
+          Fotografia • Porto
+        </p>
+      </a>
+
+      <!-- menu de cabecalho na lado direito -->
+      <div class="flex items-center gap-8">
+        <nav
+          class="hidden md:flex gap-8 text-xs uppercase tracking-wider text-cinza"
+        >
+          <a href="#qq" class="hover:text-texto">Início</a>
+          <a href="#qq" class="hover:text-texto">Serviços</a>
+          <a href="#qq" class="hover:text-texto">Contactos</a>
+        </nav>
+
+        <a
+          href="#qq"
+          class="bg-black text-white text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-sm hover:bg-terracota"
+        >
+          Disponibilidade
+        </a>
+
+        <img
+          src="images/retrato-rui-costa.jpg"
+          alt="Rui Costa"
+          class="w-8 h-8 rounded-full object-cover"
+        />
+      </div>
+    </header>
+
+    <!-- conteudo principal -->
+    <main class="pt-20 w-full min-h-screen">
+
+      <!-- sessao de apresentacao -->
+      <section id="inicio" class="px-6 md:px-16 pt-10 md:pt-16 pb-16">
+        <div class="flex flex-col items-center text-center">
+          <!-- foto perfil -->
+          <div class="relative mb-5">
+            <div class="w-40 h-40 p-1.5 bg-[#e9e8e5] rounded-xl">
+              <img
+                src="images/retrato-rui-costa.jpg"
+                alt="Rui Costa"
+                class="w-full h-full rounded-xl object-cover"
+              />
+            </div>
+
+            <!-- etiqueta a frente da foto -->
+            <span
+              class="absolute -bottom-2 right-2 bg-fundo px-2.5 py-1 rounded-full text-[11px] shadow-md uppercase tracking-widest text-cinza"
+            >
+              Porto, PT
+            </span>
+          </div>
+
+          <!-- nome -->
+          <h1 class="font-serif text-6xl md:text-8xl tracking-tight mb-2">
+            Rui Costa
+          </h1>
+
+          <!-- frase abaixo de nome -->
+          <p class="font-serif text-lg text-cinza">
+            Fotógrafo de
+            <strong class="text-texto font-semibold">
+              casamentos e paisagens</strong
+            >, no Porto.
+          </p>
+
+          <!-- menu de navegacao abaixo de apresentacao -->
+          <nav
+            class="mt-5 flex gap-4 text-xs uppercase tracking-widest text-cinza"
+          >
+            <a href="#inicio" class="hover:text-terracota">Início</a>
+            <span class="text-black/20">/</span>
+            <a href="#sobre" class="hover:text-terracota">Sobre</a>
+            <span class="text-black/20">/</span>
+            <a href="#servicos" class="hover:text-terracota">Serviços</a>
+            <span class="text-black/20">/</span>
+            <a href="#contactos" class="hover:text-terracota">Contactos</a>
+          </nav>
+        </div>
+      </section>
+
+      <!-- sessao de foto grande abaixo de apresentacao -->
+      <section class="px-6 md:px-16 mb-16">
+        <div class="relative h-[280px] md:h-[420px] rounded-lg overflow-hidden">
+          <img
+            src="images/douro-vinhateiro.jpg"
+            alt="Vale do Douro ao nascer do sol"
+            class="w-full h-full object-cover"
+          />
+
+          <!-- legenda em cima da foto -->
+          <span
+            class="absolute bottom-4 left-6 bg-fundo/90 px-3 py-1.5 rounded text-[11px] uppercase tracking-wider text-cinza"
+          >
+            Douro Vinhateiro • 41°09'N 7°48'W • Luz Matinal
+          </span>
+        </div>
+      </section>
+
+      <!-- sessao sobre mim -->
+      <section id="sobre" class="px-6 md:px-16 py-16 bg-bege">
+        <div
+          class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 items-start"
+        >
+          <!-- coluna esquerda -->
+          <div class="md:col-span-7">
+            <p
+              class="text-[11px] uppercase tracking-widest text-terracota mb-5"
+            >
+              01 / Biografia
+            </p>
+
+            <h2 class="font-serif text-4xl md:text-5xl tracking-tight mb-5">
+              Sobre mim
+            </h2>
+
+            <p class="font-serif text-lg text-cinza mb-4">
+              Comecei a fotografar aos 15 anos, com a máquina do meu avô.
+            </p>
+            <p class="font-serif text-lg text-cinza">
+              Hoje fotografo pessoas e lugares com uma
+              <abbr
+                title="câmara reflex digital"
+                class="no-underline font-medium text-texto"
+                >DSLR</abbr
+              >, sempre com luz natural.
+            </p>
+
+            <!-- especialidades -->
+            <div class="pt-8">
+              <h3 class="text-xs font-semibold uppercase tracking-wider mb-3">
+                Especialidades
+              </h3>
+
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[15px]">
+                <li class="flex items-center gap-3 p-3 bg-fundo rounded">
+                  <span
+                    class="w-1.5 h-1.5 rounded-full bg-terracota shrink-0"
+                  ></span>
+                  Fotografia documental de casamento
+                </li>
+                <li class="flex items-center gap-3 p-3 bg-fundo rounded">
+                  <span
+                    class="w-1.5 h-1.5 rounded-full bg-terracota shrink-0"
+                  ></span>
+                  Sessões de família ao ar livre
+                </li>
+                <li class="flex items-center gap-3 p-3 bg-fundo rounded">
+                  <span
+                    class="w-1.5 h-1.5 rounded-full bg-terracota shrink-0"
+                  ></span>
+                  Paisagens naturais do Norte de Portugal
+                </li>
+                <li class="flex items-center gap-3 p-3 bg-fundo rounded">
+                  <span
+                    class="w-1.5 h-1.5 rounded-full bg-terracota shrink-0"
+                  ></span>
+                  Impressão artística em papéis de algodão
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- coluna direita -->
+          <div class="md:col-span-5 md:pl-5 flex flex-col gap-5 mt-10 md:mt-0">
+            <!-- caixa curiosidade -->
+            <aside class="p-6 md:p-9 bg-white rounded-lg shadow-sm">
+              <p class="flex items-center gap-2 text-terracota mb-2">
+                <span class="material-symbols-outlined text-lg">
+                  history_edu
+                </span>
+                <span class="text-[11px] font-semibold uppercase tracking-widest">
+                  Curiosidade
+                </span>
+              </p>
+
+              <p class="text-[11px] font-semibold uppercase tracking-wider text-cinza mb-1">
+                Sabiam que…
+              </p>
+
+              <p class="font-serif italic text-2xl leading-snug">
+                a primeira fotografia da história foi tirada em 1826, por Joseph
+                Nicéphore Niépce, e demorou 8 horas de exposição.
+              </p>
+
+              <div class="mt-5 flex justify-between text-[11px] text-cinza">
+                <span>Le Gras • França</span>
+                <span>1826</span>
+              </div>
+            </aside>
+
+            <!-- foto debaixo de curiosidade -->
+            <div class="relative h-56 rounded-lg overflow-hidden">
+              <img
+                src="images/papel-algodao-arquivo.jpg"
+                alt="Impressões em papel de algodão"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-black/10"></div>
+              <span
+                class="absolute bottom-3 left-4 text-white text-[11px] uppercase tracking-wider drop-shadow"
+              >
+                Papel de Algodão 310gsm • Arquivo
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- sessao de exposicao e reconhecimento -->
+      <section id="servicos" class="px-6 md:px-16 py-16">
+        <div class="max-w-5xl mx-auto">
+          <!-- titulo de sessao -->
+          <div class="mb-9">
+            <p
+              class="text-[11px] uppercase tracking-widest text-terracota mb-2"
+            >
+              02 / Currículo • Arquivo
+            </p>
+            <h2 class="font-serif text-4xl md:text-5xl tracking-tight mb-2">
+              Exposições e Reconhecimento
+            </h2>
+            <p class="text-[15px] text-cinza">
+              Alguns dos momentos mais marcantes do meu percurso fotográfico:
+            </p>
+          </div>
+
+          <!-- tabela -->
+          <div class="overflow-x-auto bg-white rounded-lg shadow-sm">
+            <table class="w-full text-left">
+              <caption
+                class="text-left text-[11px] uppercase tracking-wider text-cinza px-6 py-4 bg-bege"
+              >
+                Histórico de exposições e distinções de Rui Costa
+              </caption>
+
+              <thead>
+                <tr class="bg-[#efeeeb] text-[11px] uppercase tracking-wider">
+                  <th class="py-4 px-6 font-semibold w-24">Ano</th>
+                  <th class="py-4 px-6 font-semibold">Exposição / Distinção</th>
+                  <th class="py-4 px-6 font-semibold">Galeria / Organização</th>
+                  <th class="py-4 px-6 font-semibold text-right">Cidade</th>
+                </tr>
+              </thead>
+
+              <tbody class="text-[15px]">
+                <tr class="group hover:bg-bege">
+                  <td
+                    class="py-5 px-6 font-serif text-2xl text-terracota group-hover:text-texto"
+                  >
+                    2025
+                  </td>
+                  <td class="py-5 px-6 font-medium">
+                    Exposição Individual "Luzes do Douro"
+                  </td>
+                  <td class="py-5 px-6 text-cinza">Galeria Municipal</td>
+                  <td
+                    class="py-5 px-6 text-xs uppercase tracking-wider text-cinza text-right"
+                  >
+                    Porto
+                  </td>
+                </tr>
+                <tr class="group hover:bg-bege">
+                  <td
+                    class="py-5 px-6 font-serif text-2xl text-terracota group-hover:text-texto"
+                  >
+                    2024
+                  </td>
+                  <td class="py-5 px-6 font-medium">
+                    Menção Honrosa em Fotografia de Paisagem
+                  </td>
+                  <td class="py-5 px-6 text-cinza">
+                    Festival de Fotografia do Norte
+                  </td>
+                  <td
+                    class="py-5 px-6 text-xs uppercase tracking-wider text-cinza text-right"
+                  >
+                    Braga
+                  </td>
+                </tr>
+                <tr class="group hover:bg-bege">
+                  <td
+                    class="py-5 px-6 font-serif text-2xl text-terracota group-hover:text-texto"
+                  >
+                    2022
+                  </td>
+                  <td class="py-5 px-6 font-medium">
+                    Exposição Coletiva "Gentes do Norte"
+                  </td>
+                  <td class="py-5 px-6 text-cinza">Centro Cultural Regional</td>
+                  <td
+                    class="py-5 px-6 text-xs uppercase tracking-wider text-cinza text-right"
+                  >
+                    Guimarães
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- sessao de testemunho -->
+      <section class="px-6 md:px-16 py-16 bg-bege">
+        <div class="max-w-4xl mx-auto">
+          <!-- titulo da sessao -->
+          <div class="text-center mb-9">
+            <p
+              class="text-[11px] uppercase tracking-widest text-terracota mb-2"
+            >
+              03 / Testemunho
+            </p>
+            <h2 class="font-serif text-4xl md:text-5xl tracking-tight">
+              O que dizem os clientes
+            </h2>
+          </div>
+
+          <!-- Cartão -->
+          <article
+            class="flex flex-col items-center text-center bg-fundo rounded-lg shadow-sm p-8 md:p-14"
+          >
+            <span
+              class="material-symbols-outlined text-4xl text-terracota opacity-75 mb-4"
+              >format_quote</span
+            >
+
+            <blockquote
+              class="font-serif italic text-2xl md:text-3xl leading-snug max-w-2xl mb-5"
+            >
+              «As fotografias do nosso casamento são o nosso maior tesouro.»
+            </blockquote>
+
+            <!-- Quem disse -->
+            <div class="flex items-center gap-3">
+              <img
+                src="images/marta-pedro-casamento.jpg"
+                alt="Marta e Pedro"
+                class="w-10 h-10 rounded-xl object-cover"
+              />
+              <p
+                class="not-italic text-xs font-semibold uppercase tracking-wider text-cinza"
+              >
+                — Marta e Pedro, casaram em 2025
+              </p>
+            </div>
+            <div
+              class="mt-9 flex gap-6 text-[11px] uppercase tracking-widest text-cinza"
+            >
+              <span>Quinta da Gricha</span>
+              <span>•</span>
+              <span>Douro</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- sessao de contato rapido -->
+      <section id="contactos" class="px-6 md:px-16 py-16">
+        <div
+          class="max-w-3xl mx-auto text-center bg-[#efeeeb] rounded-lg shadow-sm p-8 md:p-14"
+        >
+          <p class="text-[11px] uppercase tracking-widest text-terracota mb-2">
+            04 / Agendamento
+          </p>
+          <h2 class="font-serif text-4xl md:text-5xl tracking-tight mb-5">
+            Contacto rápido
+          </h2>
+
+          <p class="font-serif text-lg text-cinza max-w-xl mx-auto mb-9">
+            Têm dúvidas sobre as datas disponíveis? Enviem um e-mail para
+            <a
+              href="mailto:rui.costa@exemplo.pt"
+              class="text-texto font-semibold underline underline-offset-4 decoration-terracota hover:text-terracota"
+              >rui.costa@exemplo.pt</a
+            >
+            ou peçam um orçamento através da
+            <a
+              href="#contactos.html"
+              class="inline-block mt-4 md:mt-0 bg-black text-white font-sans text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-sm hover:bg-terracota"
+              >Página de Contactos</a
+            >.
+          </p>
+
+          <!-- Botões -->
+          <div class="flex flex-col sm:flex-row justify-center gap-5">
+            <a
+              href="mailto:rui.costa@exemplo.pt"
+              class="flex items-center justify-center gap-2 px-6 py-3.5 bg-fundo text-xs font-semibold uppercase tracking-wider rounded-sm shadow-sm hover:bg-[#e9e8e5]"
+            >
+              <img
+                src="images/icons/mail.svg"
+                alt=""
+                class="w-[18px] h-[18px]"
+              />
+              Enviar Mensagem Direta
+            </a>
+
+            <a
+              href="#contactos.html"
+              class="flex items-center justify-center gap-2 px-8 py-3.5 bg-black text-white text-xs font-semibold uppercase tracking-wider rounded-sm hover:bg-terracota"
+            >
+              <img
+                src="images/icons/calendar.svg"
+                alt=""
+                class="w-[18px] h-[18px] invert"
+              />
+              Pedir Orçamento 2026/27
+            </a>
+          </div>
+
+          <!-- Informação final -->
+          <div
+            class="mt-9 flex flex-col sm:flex-row justify-center gap-2 sm:gap-4 text-[11px] uppercase tracking-widest text-cinza"
+          >
+            <span>Resposta em menos de 24 horas</span>
+            <span class="hidden sm:inline">•</span>
+            <span>Atelier em Miguel Bombarda</span>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+
+    <!-- rodape -->
+    <footer class="bg-bege px-6 md:px-16 py-16">
+      <!-- coluna de esquerda -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 pb-9">
+        <!-- Coluna 1 -->
+        <div class="md:col-span-5">
+          <p class="font-serif text-3xl mb-2">Rui Costa — Fotografia</p>
+          <p class="text-[13px] text-cinza max-w-sm">
+            Luz atlântica, granito e narrativa documental. Casamentos e paisagem
+            autoral no Porto e Douro.
+          </p>
+        </div>
+
+        <!-- coluna de meio-->
+        <div class="md:col-span-4 flex flex-col gap-1.5 text-[13px]">
+          <p class="text-[11px] uppercase tracking-wider text-cinza">Estúdio</p>
+          <p>Rua de Miguel Bombarda, Porto</p>
+          <a
+            href="mailto:atelier@ruicosta.pt"
+            class="text-cinza hover:text-texto"
+            >atelier@ruicosta.pt</a
+          >
+        </div>
+
+        <!-- coluna de direita -->
+        <div
+          class="md:col-span-3 flex flex-col gap-1.5 text-[13px] md:text-right"
+        >
+          <p class="text-[11px] uppercase tracking-wider text-cinza">
+            Galeria &amp; Editorial
+          </p>
+          <p class="text-cinza">Disponibilidade Limitada 2026/2027</p>
+        </div>
+      </div>
+
+      <!-- parte de baixo -->
+      <div
+        class="pt-5 flex flex-col md:flex-row justify-between items-center gap-3 text-[11px] uppercase tracking-wider text-cinza"
+      >
+        <p>© 2026 Rui Costa. Todos os direitos reservados.</p>
+        <p>Porto • Portugal</p>
+      </div>
+    </footer>
+  </body>
+</html>
